@@ -1,0 +1,9 @@
+type NFT = 
+ service {
+   getCanisterID: () -> (principal) query;
+   getNFTImage: () -> (vec nat8) query;
+   getNFTName: () -> (text) query;
+   getNFTOwner: () -> (principal) query;
+   transferOwnerShip: (principal) -> (text);
+ };
+service : (text, principal, vec nat8) -> NFT
